@@ -13,10 +13,10 @@ public class Main {
     public static void main(String[] args) throws RemoteException, NotBoundException, MalformedURLException {
         SiteInterface siteInterface = (SiteInterface) Naming.lookup("//192.168.1.104/site");
         int menu;
-        while (true){
+        while (true) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("choose food: 1-pizza 2-burger 3-fries");
-            menu=scanner.nextInt();
+            menu = scanner.nextInt();
             try {
                 System.out.println(siteInterface.choose(menu));
             } catch (Exception e) {
